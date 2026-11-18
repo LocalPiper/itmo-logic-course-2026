@@ -1,0 +1,30 @@
+[submodule "rocq-fp-intro-2026"]
+	path = rocq-fp-intro-2026
+	url = git@github.com:itmo-logic-course/rocq-fp-intro-2026.git
+[submodule "rocq-natural-deduction-2026"]
+	path = rocq-natural-deduction-2026
+	url = git@github.com:itmo-logic-course/rocq-natural-deduction-2026.git
+[submodule "py-sat-reductions-2026"]
+	path = py-sat-reductions-2026
+	url = git@github.com:itmo-logic-course/py-sat-reductions-2026.git
+[submodule "sat-solver-2026"]
+	path = sat-solver-2026
+	url = git@github.com:itmo-logic-course/sat-solver-2026.git
+[submodule "prolog-2026"]
+	path = prolog-2026
+	url = git@github.com:itmo-logic-course/prolog-2026.git
+[submodule "smt-reductions-2026"]
+	path = smt-reductions-2026
+	url = git@github.com:itmo-logic-course/smt-reductions-2026.git
+[submodule "smt-solver-2026"]
+	path = smt-solver-2026
+	url = git@github.com:itmo-logic-course/smt-solver-2026.git
+[submodule "quantifier-elimination-2026"]
+	path = quantifier-elimination-2026
+	url = git@github.com:itmo-logic-course/quantifier-elimination-2026.git
+[submodule "dafny-2026"]
+	path = dafny-2026
+	url = git@github.com:itmo-logic-course/dafny-2026.git
+[submodule "chc-reductions-2026"]
+	path = chc-reductions-2026
+	url = git@github.com:itmo-logic-course/chc-reductions-2026.git
