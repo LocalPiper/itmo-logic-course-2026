@@ -69,26 +69,66 @@ Qed.
 (* Exercise *)
 Theorem backward_huge : (forall A B C : Prop, A -> (A -> B) -> (A -> B -> C) -> C).
 Proof.
-Admitted.
+  intros A B C.
+  intros H1 H2 H3.
+  apply H3.
+  - assumption.
+  - apply H2. assumption.
+Qed.
 
 (* Exercise *)
 Lemma distributivity_of_disjunction_over_conjunction:
   forall A B C : Prop,
     A \/ (B /\ C) <-> (A \/ B) /\ (A \/ C).
 Proof.
-Admitted.
+  intros A B C.
+  unfold "<->". split.
+  - intros [H1 | H2].
+    + split.
+      * left. assumption.
+      * left. assumption.
+    + split.
+      * right. apply H2.
+      * right. apply H2.
+  - intros [[HA | HB] [HA' | HC]].
+    + left. assumption.
+    + left. assumption.
+    + left. assumption.
+    + right. split.
+      * assumption.
+      * assumption.
+Qed.
 
 (* Exercise *)
 Lemma Curry_and_unCurry : forall P Q R : Prop, (P /\ Q -> R) <-> (P -> Q -> R).
-Admitted.
+Proof.
+  intros P Q R. unfold "<->". split.
+  - intros H1 H2 H3. apply H1. split.
+    + assumption.
+    + assumption.
+  - intros H1 H2.
+    + apply H1.
+      * apply H2.
+      * apply H2.
+Qed.
 
 (* Exercise *)
 Theorem contrapositive : forall (P Q : Prop),
   (P -> Q) -> (~Q -> ~P).
 Proof.
-Admitted.
+  intros P Q. unfold "~".
+  intros H1 H2 H3.
+  apply H2. apply H1. assumption. 
+Qed.
 
 (* Exercise *)
 Theorem de_morgan_not_or : forall (P Q : Prop), ~ (P \/ Q) <-> ~P /\ ~Q.
 Proof.
-Admitted.
+  intros P Q. unfold "<->". unfold "~". split.
+  - intros H1. split.
+    + intros Hp. elim H1. left. assumption.
+    + intros Hq. elim H1. right. assumption.
+  - intros [H1 H2] [H3 | H4].
+    + apply H1. assumption.
+    + apply H2. assumption. 
+Qed.
